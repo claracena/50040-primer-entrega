@@ -70,6 +70,8 @@ const saveData = (data) => {
 
     const jsonData = JSON.stringify(data, null, 2);
     fs.writeFile('products.json', jsonData, finished);
+
+    console.log('Producto agregado satisfactoriamente');
 };
 
 /**
@@ -166,8 +168,12 @@ class ProductManager {
  * descomentando las 4 lineas, pero puede agregar sus propios productos
  * o insertar estos productos cuantas veces necesite
  */
+
+// Producto 1
 // const producto1 = new ProductManager();
 // producto1.addProduct('Manzana', 'Manzana Red Delicious del Valle', 99, 'manzana.jpg', 140000);
+
+// Producto 2
 // const producto2 = new ProductManager();
 // producto2.addProduct('Pera', 'Pera Williams de temporada', 80, 'pera.jpg', 80000);
 
@@ -178,7 +184,7 @@ class ProductManager {
  * Descomentando la tercer linea, visualizar un producto en especifico
  * Descomentando la ultima linea, eliminar el archivo y comenzar desde cero
  */
-const productos = new ProductManager();
+// const productos = new ProductManager();
 // console.log(productos.getProducts());
 // console.log(productos.getProductById(3));
 // productos.deleteProducts();
