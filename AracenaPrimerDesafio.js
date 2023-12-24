@@ -72,7 +72,13 @@ const saveData = (data) => {
     fs.writeFile('products.json', jsonData, finished);
 };
 
-// Proporciona un modelo para trabajar con los productos
+/**
+ * Proporciona un modelo para trabajar con los productos
+ * @method addProduct - Se utiliza para agregar nuevos productos
+ * @method getProducts - Permite visualizar todos los productos
+ * @method getProductById - Permite buscar un producto por su ID
+ * @method deleteProducts - Permite eliminar la lista de productos
+ */
 class ProductManager {
     constructor() {
         this.code = productsQty + 1;
@@ -123,9 +129,13 @@ class ProductManager {
     /**
      * Permite buscar un producto en particular utilizando el codigo de producto
      * @param {integer} id - codigo unico identificatorio del producto a buscar
-     * @returns {object} Objeto con caracteristicas del producto buscado
+     * @returns {object} Objeto con caracteristicas del producto buscado o mensaje si no encuentra el codigo
      */
     getProductById(id) {
+        if (data[id] === undefined) {
+            return `No existe un producto con el codigo ${id}`;
+        }
+
         return data[id];
     }
 
@@ -168,7 +178,7 @@ class ProductManager {
  * Descomentando la tercer linea, visualizar un producto en especifico
  * Descomentando la ultima linea, eliminar el archivo y comenzar desde cero
  */
-// const productos = new ProductManager();
+const productos = new ProductManager();
 // console.log(productos.getProducts());
-// console.log(productos.getProductById(2));
+// console.log(productos.getProductById(3));
 // productos.deleteProducts();
