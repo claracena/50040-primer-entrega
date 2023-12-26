@@ -24,16 +24,16 @@
 
 ### Agregado de productos
 
-#### Para agregar un producto, es necesario instanciar un objeto/variable desde la clase maestra, para luego llamar al método addProduct() es decir, que se deben descomentar de a dos (2) líneas por producto que se desee agregar. Por ejemplo, las líneas 173 y 174 para agregar el primero de los productos listos en el ejemplo
+#### Para agregar un producto, es necesario instanciar un objeto/variable desde la clase maestra, para luego llamar al método addProduct() es decir, que se deben descomentar de a dos (2) líneas por producto que se desee agregar. Por ejemplo, las líneas 180 y 181 para agregar el primero de los productos listos en el ejemplo
 
 ### Obtener lista de productos
 
-#### Simplemente creamos una instancia de la clase maestra y llamamos al método getProducts(). En el ejemplo esto significa descomentar las líneas 187 y 188. Conviene dejar descomentada la línea 187 hasta finalizar con las pruebas
+#### Simplemente creamos una instancia de la clase maestra y llamamos al método getProducts(). En el ejemplo esto significa descomentar las líneas 194 y 195. Conviene dejar descomentada la línea 194 hasta finalizar con las pruebas
 
 ### Obtener un producto en específico
 
-#### Con la clase instanciada (línea 187 descomentada), descomentar la línea 189 y ejecutar el archivo bajo el servidor de Node. Esto llamará al método getProductById(n) el cual recibe un solo parámetro que es un entero con el número de ID del producto a buscar.
+#### Con la clase instanciada (línea 194 descomentada), descomentar la línea 196 y ejecutar el archivo bajo el servidor de Node. Esto llamará al método getProductById(n) el cual recibe un solo parámetro que es un entero con el número de ID del producto a buscar.
 
 ### Eliminación de productos
 
-#### Para eliminar el archivo con los productos, simplemente dejar instanciada la clase y descomentar la línea 190 para llamar al método deleteProducts() que eliminará el archivo de productos creado previamente
+#### Para eliminar el archivo con los productos, simplemente dejar instanciada la clase y descomentar la línea 197 para llamar al método deleteProducts() que eliminará el archivo de productos creado previamente

@@ -97,6 +97,11 @@ class ProductManager {
      * @param {integer} stock - Cantidad de producto disponible
      */
     addProduct(title, description, price, thumbnail, stock) {
+        if (stock <= 0 || typeof stock !== 'number') {
+            console.log('Debe ingresar una cantidad real');
+            return '';
+        }
+
         let thisItem = {};
 
         this.title = title;
@@ -124,7 +129,8 @@ class ProductManager {
         if (productsQty > 1) {
             return data;
         } else {
-            return 'No products found';
+            console.log('No products found');
+            return '';
         }
     }
 
@@ -135,10 +141,11 @@ class ProductManager {
      */
     getProductById(id) {
         if (data[id] === undefined) {
-            return `No existe un producto con el codigo ${id}`;
+            console.log(`No existe un producto con el codigo ${id}`);
+            return '';
+        } else {
+            return data[id];
         }
-
-        return data[id];
     }
 
     /**
@@ -171,7 +178,7 @@ class ProductManager {
 
 // Producto 1
 // const producto1 = new ProductManager();
-// producto1.addProduct('Manzana', 'Manzana Red Delicious del Valle', 99, 'manzana.jpg', 140000);
+// producto1.addProduct('Manzana', 'Manzana Red Delicious del Valle', 99, 'manzana.jpg', 0);
 
 // Producto 2
 // const producto2 = new ProductManager();
@@ -186,5 +193,5 @@ class ProductManager {
  */
 // const productos = new ProductManager();
 // console.log(productos.getProducts());
-// console.log(productos.getProductById(3));
+// console.log(productos.getProductById(1));
 // productos.deleteProducts();
